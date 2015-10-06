@@ -1,0 +1,58 @@
+<html>
+<head>
+<title> Lab 7 </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+int x;
+
+// give this hint at the start
+int z;
+
+void setup()
+{
+	size( 650, 300 );
+	frameRate( 30 );
+	x = 2;
+	z = 1;
+}
+
+
+void draw()
+{
+	background(0,0,0);
+	text("Hello World",10,10);
+	text(x,10,50);
+
+	fill(255,0,0);
+	rect(50,50,100,100);
+	
+	// give this hint after 10 mins
+	if (mousePressed == true)
+	{
+		// give this hint after 20 mins
+		// if (mouseButton == LEFT && z )
+		if (mouseButton == LEFT && z == 1)
+		{
+			if (mouseX > 50 && mouseX < 50 + 100 &&
+				mouseY > 50 && mouseY < 50 + 100)
+			{
+				x = x + 1;
+				z = 0;
+			}
+		}
+	}
+	else
+	{
+		z = 1;
+	}
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
